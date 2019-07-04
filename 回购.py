@@ -81,13 +81,15 @@ df_data1_y1=df_data1['预期回购金额']
 df_data1_y2=df_data1['公布预案家数']
 fig_data1=plt.figure()
 ax1=fig_data1.add_subplot(1,1,1)
-ax1.bar(df_data1_x,df_data1_y1,alpha=.4,color='r')
-ax1.set_ylabel('预期回购金额（亿元）')
+ax1.bar(df_data1_x,df_data1_y1,alpha=.4,color='r',label=u'预期回购金额')
+ax1.set_ylabel('单位：亿元')
 ax1.set_title('年度回购预案')
+ax1.legend()
 ax2=ax1.twinx()
-ax2.plot(df_data1_x,df_data1_y2,'g',marker='*')
-ax2.set_ylabel('公布预案家数')
+ax2.plot(df_data1_x,df_data1_y2,'g',marker='*',label=u'公布预案家数(右轴）')
+ax2.set_ylabel('单位：家')
+ax2.legend(loc=9)
 fig_data1.show()
-
+#
 
 zs=w.wsd("000300.SH", "close", "2007-12-31", "2019-07-01", "PriceAdj=F")#沪深300时间序列
