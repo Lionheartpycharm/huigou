@@ -90,8 +90,6 @@ ax2.plot(df_data1_x,df_data1_y2,'g',marker='*',label=u'公布预案家数(右轴
 ax2.set_ylabel('单位：家')
 ax2.legend(loc=9)
 fig_data1.show()
-
+#
 
 zs=w.wsd("000300.SH", "close", "2007-12-31", "2019-07-01", "PriceAdj=F")#沪深300时间序列
-
-;froewuitenrwoigew
